@@ -1,0 +1,15 @@
+{
+  "name": "soa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GNU GPL v3",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1"
+  }
+}
