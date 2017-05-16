@@ -13,7 +13,7 @@ object MailHelper {
     val from = "kevingutierrezg@gmail.com"
 
     val username = "kevingutierrezg@gmail.com"
-    val password = "Seduction93"
+    val password = ""
 
     // Get system properties
     val properties = System.getProperties
