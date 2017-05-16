@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div>
+            <table class="table table-striped" ng-show="vm.users && vm.users.length > 0">
+                <thead>
+                    <tr>
+                        <th style="width: 200px">Nombre</th>
+                        <th>Correo</th>
+                        <th class="controls"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in vm.users | orderBy: 'name'">
+                        <td style="width: 200px">{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" ng-click="vm.remove(user)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr ng-show="vm.allowNewUser">
+                        <td style="width: 200px">
+                            <input type="text" placeholder="Escriba el nombre" ng-model="vm.name" class="form-control" required="required">
+                        </td>
+                        <td>
+                            <input type="email" placeholder="Escriba el correo" ng-model="vm.email" class="form-control" required="required">
+                        </td>
+                        <td>
+                            <button class="btn btn-success btn-sm" ng-click="vm.create()">Salvar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 ng-hide="vm.users && vm.users.length > 0">No hay usuarios registrados.</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <div class="text-center">
+                    <button class="btn btn-default" ng-click="vm.addNew()">Crear Nuevo Usuario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

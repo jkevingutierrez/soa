@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-preview" ng-repeat="post in vm.posts | orderBy: orderByDate" ng-show="vm.posts && vm.posts.length > 0">
+            <a ng-href="{{ '/post/' + post.id }}">
+                <h2 class="post-title">
+                  {{ post.title }}
+                </h2>
+                <h3 class="post-subtitle">
+                  {{ post.subtitle }}
+                </h3>
+            </a>
+            <p class="post-meta">Creado por {{ post.user.name }} el día {{ post.createdDate }}</p>
+        </div>
+        <div>
+            <h3 ng-hide="vm.posts && vm.posts.length > 0">No existe ningun post.</h3>
+        </div>
+        <hr/>
+    </div>
+</div>

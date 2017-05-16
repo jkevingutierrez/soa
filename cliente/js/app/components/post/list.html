@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-preview" ng-repeat="post in vm.posts | orderBy: orderByDate" ng-show="vm.posts && vm.posts.length > 0">
+            <a ng-href="{{ '/post/edit/' + post.id }}">
+                <h2 class="post-title">
+                  {{ post.title }}
+                </h2>
+                <h3 class="post-subtitle">
+                  {{ post.subtitle }}
+                </h3>
+            </a>
+            <p class="post-meta">Creado por {{ post.user.name }} el día {{ post.createdDate }}
+            </p>
+            <div class="text-right">
+                <button class="btn btn-danger btn-sm" ng-click="vm.remove(post)">Eliminar Post</button>
+            </div>
+            <hr/>
+        </div>
+        <div ng-hide="vm.posts && vm.posts.length > 0">
+            <h3>No existe ningun post.</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <div class="text-center">
+                    <a class="btn btn-default" href="/posts/create" role="button">Crear Nuevo Post</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

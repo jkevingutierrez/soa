@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h3 class="text-center">Ingresa tus datos para registrarte</h3>
+        <form ng-submit="vm.submit()">
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="name" required="required" ng-model="vm.name" autofocus/>
+                </div>
+            </div>
+            <div class="row control-group">
+                <div class="form-group col-xs-12 floating-label-form-group controls">
+                    <label for="email">Correo electronico</label>
+                    <input type="email" class="form-control" placeholder="Correo electronico" id="email" required="required" ng-model="vm.email" />
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
